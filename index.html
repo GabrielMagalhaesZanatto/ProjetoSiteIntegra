@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Íntegra Soluções em Saúde | O Paciente no Centro</title>
 <meta name="description" content="Linhas de cuidado que integram, protegem e acompanham. Da prevenção à alta complexidade.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22182%20182%20720%20720%22%3E%3Cpath%20d%3D%22M579.07%2C881.33c-143.78%2C0-271.56-103.29-297.37-249.68-9.2-52.15-4.48-106.02%2C13.63-155.79l108.15%2C39.35c-11.21%2C30.81-14.13%2C64.16-8.44%2C96.45%2C17.91%2C101.56%2C115.09%2C169.62%2C216.65%2C151.7%2C49.2-8.68%2C92.07-35.99%2C120.73-76.91%2C28.65-40.92%2C39.65-90.55%2C30.98-139.74-8.68-49.2-35.98-92.07-76.91-120.73-40.93-28.66-90.55-39.68-139.74-30.98l-19.98-113.34c79.48-14.04%2C159.64%2C3.76%2C225.74%2C50.05%2C66.1%2C46.29%2C110.22%2C115.54%2C124.24%2C195.01s-3.76%2C159.65-50.04%2C225.75c-46.29%2C66.1-115.54%2C110.22-195.02%2C124.24-17.67%2C3.12-35.25%2C4.62-52.6%2C4.62Z%22%20fill%3D%22%23003745%22/%3E%3Cpath%20d%3D%22M204.47%2C645.23c-17.65-100.09%2C4.74-201.07%2C63.05-284.32%2C58.3-83.26%2C145.54-138.82%2C245.63-156.47%2C65.66-11.58%2C133.51-5.65%2C196.18%2C17.16l-14.26%2C39.21c-55.81-20.31-116.22-25.6-174.68-15.28-89.12%2C15.71-166.79%2C65.19-218.7%2C139.31-51.91%2C74.13-71.84%2C164.03-56.13%2C253.16l-41.08%2C7.24Z%22%20fill%3D%22%2300978A%22/%3E%3Cpolygon%20points%3D%22536.63%20525.48%20583.46%20455.99%20655.96%20455.99%20602.34%20525.48%20536.63%20525.48%22%20fill%3D%22%23003745%22/%3E%3Crect%20x%3D%22537.38%22%20y%3D%22545.87%22%20width%3D%2270.24%22%20height%3D%22164.18%22%20fill%3D%22%23003745%22/%3E%3C/svg%3E">
@@ -138,6 +138,47 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 }
 @media(max-width:480px){.logo svg{width:190px;height:48.6px}.bar{height:72px}nav{top:72px!important}}
 @media(prefers-reduced-motion:reduce){#jr .ln{animation:none;stroke-dashoffset:0}#jr .rg{animation:none;opacity:1}html{scroll-behavior:auto}}
+
+/* ===== v2: layout fluido ===== */
+header{padding-top:env(safe-area-inset-top,0px)}
+h1{font-size:clamp(2.5rem,6.2vw,4.6rem)}h2{position:relative;font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:1.1rem}
+section{padding:104px 0 144px;background:var(--areia);position:relative}
+.page>section:not(:first-child),.page>.cta-band,footer{border-radius:56px 56px 0 0;margin-top:-56px;position:relative}
+.dark{background:var(--pet)}.soft{background:var(--nevoa)}
+.hero{padding:104px 0 160px}
+.cta-band{padding:100px 0 150px}
+footer{padding:84px 0 calc(36px + env(safe-area-inset-bottom,0px))}
+.j{padding-left:84px}
+.j:before{content:"";position:absolute;left:39px;top:0;bottom:0;border-left:2px solid rgba(0,151,138,.4)}
+.j h2:before{content:"";position:absolute;left:-53px;top:.28em;width:18px;height:18px;border-radius:50%;background:var(--areia);border:3px solid var(--agua);box-shadow:0 0 0 6px rgba(0,151,138,.14)}
+.soft .j h2:before{background:var(--nevoa)}.dark .j h2:before{background:var(--pet);border-color:#7fd0c8}.dark .j:before{border-color:rgba(127,208,200,.35)}
+.split{display:grid;grid-template-columns:.8fr 1.5fr;gap:64px}
+.rows>div{display:grid;grid-template-columns:1fr 1.5fr;gap:12px 28px;padding:28px 0;border-top:1px solid rgba(0,55,69,.18)}
+.rows>div:last-child{border-bottom:1px solid rgba(0,55,69,.18)}
+.dark .rows>div{border-color:rgba(255,255,255,.22)}
+.rows h3{margin:0}.rows p{color:var(--medio)}.dark .rows p{color:#b9d3d1}.rows .note{grid-column:2;color:var(--pet);margin-top:0}
+.vs{gap:0;border-radius:32px;overflow:hidden}.vs>div{border-radius:0;padding:48px}.vs .pb{border:0;background:var(--nevoa)}
+.aud{display:flex;gap:0}.aud div{flex:1;background:none;border-radius:0;padding:8px 14px;border-left:1px solid rgba(0,55,69,.18)}.aud div:first-child{border:0}
+.pillars{gap:0 64px}.pillars div{background:none;border-radius:0;border:0!important;border-top:2px solid var(--agua)!important;padding:26px 0}
+.diff{gap:0 48px}.diff div{background:none;border-radius:0;padding:24px 0;border-top:1px solid rgba(0,55,69,.18)}
+.pyr div{border-radius:22px}
+.gal{grid-template-columns:1.5fr 1fr 1fr;gap:20px}.ph{aspect-ratio:auto;min-height:440px;border-radius:28px}
+.exp{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px;margin-top:28px}
+.exp li{position:relative;border-top:2px solid var(--agua);padding-top:18px;font:600 1.05rem Sora;display:block;background:none;border-radius:0;border-left:0;border-right:0;border-bottom:0}
+.exp li:before{content:"";position:absolute;left:0;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--areia);border:3px solid var(--agua)}
+.ind{gap:44px}.ind div{background:none;border-radius:0;padding:22px 0 0;border:0!important;border-top:3px solid var(--agua)!important}
+.val{gap:56px}.val div{background:none;border-radius:0;padding:26px 0 0;border-top:1px solid rgba(255,255,255,.28);font:300 1.45rem/1.4 Manrope}
+.info{border-radius:28px}
+@media(max-width:900px){
+.page>section:not(:first-child),.page>.cta-band,footer{border-radius:32px 32px 0 0;margin-top:-32px}
+section{padding:72px 0 100px}.hero{padding:72px 0 110px}
+.wrap{padding:0 22px}.j{padding-left:50px}.j:before{left:12px}.j h2:before{left:-43px;width:16px;height:16px}
+.split,.rows>div,.vs,.val{grid-template-columns:1fr}.split{gap:28px}.rows .note{grid-column:1}
+.vs>div{padding:32px 26px}.aud{display:grid;grid-template-columns:1fr 1fr;gap:20px}.aud div{border:0!important}
+.gal,.diff,.pillars,.ind,.exp{grid-template-columns:1fr 1fr}.gal .ph:first-child{grid-column:1/-1}.ph{min-height:260px}
+.diff,.pillars{gap:0 24px}
+}
+@media(max-width:560px){.gal,.diff,.pillars,.ind,.exp{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -180,7 +221,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 </svg>
 </div></div>
 
-<section><div class="wrap">
+<section><div class="wrap j">
 <h2>O problema não é a falta de acesso.<br>É a falta de coordenação.</h2>
 <div class="vs">
 <div class="pb"><h3>Assistência fragmentada</h3>
@@ -192,7 +233,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 <ul><li>Continuidade</li><li>Devolutiva à equipe de referência</li></ul></div>
 </div></div></section>
 
-<section class="soft"><div class="wrap">
+<section class="soft"><div class="wrap j">
 <h2>Somos um parceiro. Uma jornada inteira.</h2>
 <div class="aud">
 <div><svg viewBox="0 0 48 48"><path d="M24 6 8 14v10c0 10 7 16 16 18 9-2 16-8 16-18V14z"/><path d="M17 24l5 5 9-10"/></svg>Operadoras</div>
@@ -207,7 +248,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 
 <!-- PÁGINA 2: MODELO -->
 <div class="page" id="modelo">
-<section><div class="wrap">
+<section><div class="wrap j">
 <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem">O Modelo Íntegra</h1>
 <p class="lead">Íntegra vem de íntegro: inteiro, correto e fiel aos princípios. Confiança não é discurso, é prática presente em cada decisão, relação e cuidado.</p>
 <h2 style="margin-top:56px">O que significa colocar a pessoa no centro?</h2>
@@ -218,7 +259,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 <div><p>Unir centralidade, qualidade, segurança e sustentabilidade na cultura assistencial.</p></div>
 </div></div></section>
 
-<section class="dark"><div class="wrap">
+<section class="dark"><div class="wrap j">
 <h2>A jornada do cuidado</h2>
 <p class="lead">Selecione uma etapa para ver como ela funciona.</p>
 <div class="tl" role="tablist">
@@ -231,7 +272,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 <p id="tp" role="tabpanel" aria-live="polite"></p>
 </div></section>
 
-<section><div class="wrap">
+<section><div class="wrap j">
 <h2>O cuidado certo, no nível certo</h2>
 <div class="pyr">
 <div><span><strong>Atenção Terciária e Alta Complexidade</strong><p>Casos selecionados. Condições de maior complexidade.</p></span></div>
@@ -239,7 +280,7 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 <div><span><strong>Atenção Primária e Ocupacional</strong><p>Maioria das pessoas. Prevenção e cuidado longitudinal.</p></span></div>
 </div></div></section>
 
-<section class="soft"><div class="wrap">
+<section class="soft"><div class="wrap j">
 <h2>Por que escolher a Íntegra?</h2>
 <div class="diff">
 <div><h3>Visão sistêmica</h3></div><div><h3>Paciente no centro</h3></div><div><h3>Integração real</h3></div>
@@ -249,56 +290,55 @@ nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}form{gri
 
 <!-- PÁGINA 3: SOLUÇÕES -->
 <div class="page" id="solucoes">
-<section><div class="wrap">
-<h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem">Soluções e linhas de cuidado</h1>
+<section><div class="wrap j">
+<h1 style="font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1rem">Soluções e linhas de cuidado</h1>
 <p class="lead">Um ecossistema, uma jornada coordenada. Nossa equipe de referência organiza o fluxo entre prevenção, avaliações especializadas e programas de maior complexidade.</p>
-<h2 style="margin-top:56px">Gestão e coordenação</h2>
-<div class="cols">
-<div class="card big"><h3>Gestão de Risco da Carteira</h3><p>Estratificação de risco, ação coordenada e gestão por resultados. Cuidar é também antecipar.</p></div>
-<div class="card big"><h3>APS e Saúde Ocupacional</h3><p>A porta de entrada. Vínculo e coordenação, saúde de quem trabalha (prevenção, saúde mental, ergonomia). O cuidado começa dentro da empresa.</p></div>
-<div class="card big"><h3>Telemedicina e Navegação</h3><p>Enfermeira navegadora que escuta, orienta e direciona. Acesso ágil, encaminhamento adequado, segurança assistencial e uso racional de recursos.</p>
-<p class="note"><strong>Importante:</strong> não há solicitação de atestado por telemedicina/navegação. A emissão é apenas presencial.</p></div>
-</div></div></section>
-
-<section class="soft"><div class="wrap">
-<h2>Programas especializados</h2>
-<div class="cols">
-<div class="card"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><path d="M10 42c0-9 6-14 14-14s14 5 14 14"/></svg><h3>Especialidades Médicas</h3><p>Encaminhamento qualificado e decisão fundamentada.</p></div>
-<div class="card"><svg viewBox="0 0 48 48"><path d="M24 6c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19z"/><path d="M20 26h8"/></svg><h3>Centro de Infusão</h3><p>Segurança na administração, protocolos validados e equipe especializada.</p></div>
-<div class="card"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="6"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6"/></svg><h3>Oncologia</h3><p>Diagnóstico, prevenção, tratamento e suporte multidisciplinar.</p></div>
-<div class="card"><svg viewBox="0 0 48 48"><path d="M24 6 8 14v10c0 10 7 16 16 18 9-2 16-8 16-18V14z"/></svg><h3>Doenças Autoimunes</h3><p>Elegibilidade, evidência, segurança e terapias imunobiológicas.</p></div>
-<div class="card"><svg viewBox="0 0 48 48"><circle cx="16" cy="18" r="5"/><circle cx="34" cy="14" r="5"/><circle cx="26" cy="34" r="5"/><path d="M20 21l4 9M30 18l-3 12M21 17l8-2"/></svg><h3>TEA (Transtorno do Espectro Autista)</h3><p>Avaliação qualificada, estrutura adequada e plano individual.</p></div>
-<div class="card"><svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="34" cy="20" r="5"/><path d="M6 40c0-8 5-12 12-12s12 4 12 12M30 30c6 0 12 3 12 10"/></svg><h3>RH Médico</h3><p>Recrutamento, dimensionamento e desenvolvimento de equipes.</p></div>
-</div></div></section>
-
+<div class="split" style="margin-top:72px">
+<div><h2>Gestão e coordenação</h2><p>A base da jornada: identificar, vincular e direcionar cada pessoa ao cuidado certo.</p></div>
+<div class="rows">
+<div><h3>Gestão de Risco da Carteira</h3><p>Estratificação de risco, ação coordenada e gestão por resultados. Cuidar é também antecipar.</p></div>
+<div><h3>Atenção Primária e Saúde Ocupacional</h3><p>A porta de entrada. Vínculo e coordenação, saúde de quem trabalha (prevenção, saúde mental, ergonomia). O cuidado começa dentro da empresa.</p></div>
+<div><h3>Telemedicina e Navegação</h3><p>Enfermeira navegadora que escuta, orienta e direciona. Acesso ágil, encaminhamento adequado, segurança assistencial e uso racional de recursos.</p><p class="note"><strong>Importante:</strong> não há solicitação de atestado por telemedicina/navegação. A emissão é apenas presencial.</p></div>
+<div><h3>Especialidades Médicas</h3><p>Encaminhamento qualificado e decisão fundamentada.</p></div>
+<div><h3>RH Médico</h3><p>Recrutamento, dimensionamento e desenvolvimento de equipes.</p></div>
+</div></div></div></section>
+<section class="dark"><div class="wrap j"><div class="split">
+<div><h2>Programas especializados</h2><p class="lead">Linhas de cuidado para condições que pedem acompanhamento próximo e protocolos validados.</p></div>
+<div class="rows">
+<div><h3>Terapia Assistida Infusional</h3><p>Segurança na administração, protocolos validados e equipe especializada.</p></div>
+<div><h3>Oncologia</h3><p>Diagnóstico, prevenção, tratamento e suporte multidisciplinar.</p></div>
+<div><h3>Doenças Autoimunes</h3><p>Elegibilidade, evidência, segurança e terapias imunobiológicas.</p></div>
+<div><h3>Transtorno do Espectro Autista (TEA)</h3><p>Avaliação qualificada, estrutura adequada e plano individual.</p></div>
+<div><h3>Doenças Respiratórias</h3><p>Diagnóstico, controle e acompanhamento contínuo, com protocolos e seguimento coordenado.</p></div>
+</div></div></div></section>
 <div class="cta-band"><div class="wrap"><h2>Vamos desenhar juntos a linha de cuidado da sua população?</h2><a class="btn" href="#contato">Fale com a Íntegra</a></div></div>
 </div>
 
 <!-- PÁGINA 4: ESTRUTURA -->
 <div class="page" id="estrutura">
-<section><div class="wrap">
-<h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem">Estrutura e resultados</h1>
+<section><div class="wrap j">
+<h1 style="font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1rem">Estrutura e resultados</h1>
 <p class="lead">Solidez para cuidar hoje, capacidade para crescer com o parceiro.</p>
-<h2 style="margin-top:56px">Nossa estrutura</h2>
+<h2 style="margin-top:72px">Unidades atuais</h2>
 <div class="gal">
 <div class="ph"><em>Substituir por foto</em><div><b>Brasília (DF)</b><small>Consultórios e estrutura de infusão</small></div></div>
 <div class="ph"><em>Substituir por foto</em><div><b>São Paulo (SP)</b><small>Estrutura de quimioterapia e equipamentos de alta complexidade</small></div></div>
 <div class="ph"><em>Substituir por foto</em><div><b>Araras (SP)</b><small>Salas de atendimento no interior</small></div></div>
 </div>
-<div class="exp"><strong>Em expansão:</strong><span>Recife (PE)</span><span>São Luís (MA)</span><span>Rio de Janeiro (RJ)</span><small>Operação em implantação</small></div>
+<h2 style="margin-top:80px">Em expansão</h2>
+<ul class="exp"><li>Recife (PE)</li><li>São Luís (MA)</li><li>Rio de Janeiro (RJ)</li><li>Goiânia (GO)</li><li>Salvador (BA)</li><li>Vitória da Conquista (BA)</li><li>Feira de Santana (BA)</li><li>Fortaleza (CE)</li></ul>
+<p class="lead" style="font-size:1rem;margin-top:24px">Operação em implantação.</p>
 </div></section>
-
-<section class="soft"><div class="wrap">
+<section class="soft"><div class="wrap j">
 <h2>Valor que pode ser medido</h2>
 <p class="lead">Indicadores acompanhados junto aos parceiros.</p>
 <div class="ind">
-<div><h3>Qualidade Assistencial</h3><ul><li>Adesão a protocolos</li><li>Continuidade e segurança</li><li>Desfechos clínicos</li></ul></div>
-<div><h3>Sustentabilidade Financeira</h3><ul><li>Custo assistencial</li><li>Exames e encaminhamentos</li><li>Uso adequado dos recursos</li></ul></div>
-<div><h3>Saúde Ocupacional</h3><ul><li>Absenteísmo e afastamentos</li><li>Retorno ao trabalho</li><li>Risco ocupacional</li></ul></div>
-<div><h3>Experiência do Paciente</h3><ul><li>Acesso e resolutividade</li><li>Satisfação</li><li>Continuidade percebida</li></ul></div>
+<div><h3>Qualidade assistencial</h3><ul><li>Adesão aos protocolos</li><li>Continuidade</li><li>Segurança</li><li>Desfechos clínicos</li></ul></div>
+<div><h3>Sustentabilidade financeira</h3><ul><li>Custo assistencial</li><li>Exames e encaminhamentos</li><li>Uso adequado de recursos</li></ul></div>
+<div><h3>Saúde ocupacional</h3><ul><li>Absenteísmo e afastamentos</li><li>Retorno ao trabalho</li><li>Risco ocupacional</li></ul></div>
+<div><h3>Experiência do paciente</h3><ul><li>Acesso</li><li>Resolutividade</li><li>Satisfação</li><li>Continuidade percebida</li></ul></div>
 </div></div></section>
-
-<section class="dark"><div class="wrap">
+<section class="dark"><div class="wrap j">
 <h2>Valor para cada parceiro</h2>
 <div class="val">
 <div><h3>Para Recursos Humanos</h3>Pessoas mais saudáveis e trabalho sustentável.</div>
